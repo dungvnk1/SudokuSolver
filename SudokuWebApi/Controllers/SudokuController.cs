@@ -8,7 +8,6 @@ using SudokuWebApi.Models;
 
 namespace SudokuWebApi.Controllers
 {
-    // [EnableCors("http://127.0.0.1:5500")]
     [ApiController]
     [Route("api/[controller]")]    
     public class SudokuController : ControllerBase

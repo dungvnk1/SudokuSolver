@@ -1,7 +1,6 @@
 const solveButton = document.getElementById("solveButton");
 solveButton.addEventListener("click", function() {
     solveClickButton();
-    // getData();
 });
 
 function solveClickButton() {
@@ -13,11 +12,11 @@ function solveClickButton() {
         alert("Unable to solve Sudoku puzzle. Please check your input.");
     }
 
-    const sudoku = JSON.stringify(solution); // Assuming you have a function that gets the Sudoku string from the input fields
+    const sudoku = JSON.stringify(solution); // gets the Sudoku string from the input fields
     
-    const strWithoutBrackets = sudoku.replace(/\[|\]/g, ''); // xóa các ký tự [ và ]
-    const arr = strWithoutBrackets.split(','); // chuyển chuỗi thành mảng
-    const result = arr.join('').trim(); // ghép mảng thành chuỗi
+    const strWithoutBrackets = sudoku.replace(/\[|\]/g, ''); // delete characters [ and ]
+    const arr = strWithoutBrackets.split(',');
+    const result = arr.join('').trim(); // combine array to string
     
     const solvedAt = new Date().toISOString();
 
@@ -40,7 +39,7 @@ function solveClickButton() {
     $(function() {
         $("#gridContainer").dxDataGrid({
             dataSource: new DevExpress.data.CustomStore({
-                loadMode: "raw", // omit in the DataGrid, TreeList, PivotGrid, and Scheduler
+                loadMode: "raw",
                 load: function() {
                     return $.getJSON("https://localhost:7040/api/Sudoku")
                         .fail(function() { throw "Data loading error" });

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "flPY720kGhWJqeJ+oVUD37iPBonkhT6nqfqFverrKud2KDPQCKg8FyucCHdNhCbvFF/ZIlQSUGdWu8bkEb69pA==",
+  "dgSpecHash": "A42CdMuAfoJt4kiOY/hath/zlwjXwQxoX8fuNIZs/fnW2F/A/GxViCkzM/BMZOJQhN423wg7PIK6QtxhXzb/Gg==",
   "success": true,
-  "projectFilePath": "E:\\Intern PHP\\sudoku\\SudokuWebApi\\SudokuWebApi.csproj",
+  "projectFilePath": "E:\\Intern PHP\\sudokuSolver\\SudokuSolver\\SudokuWebApi\\SudokuWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

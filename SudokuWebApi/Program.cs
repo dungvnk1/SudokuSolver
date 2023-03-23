@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 var builderConfigure = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: "SpecificOption",
@@ -17,7 +16,6 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SudokuDbContext>(options => options.UseSqlServer(builderConfigure));
@@ -30,7 +28,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 
 app.UseDefaultFiles();
 

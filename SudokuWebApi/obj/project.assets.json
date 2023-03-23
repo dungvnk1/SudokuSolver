@@ -3728,11 +3728,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Intern PHP\\sudoku\\SudokuWebApi\\SudokuWebApi.csproj",
+      "projectUniqueName": "E:\\Intern PHP\\sudokuSolver\\SudokuSolver\\SudokuWebApi\\SudokuWebApi.csproj",
       "projectName": "SudokuWebApi",
-      "projectPath": "E:\\Intern PHP\\sudoku\\SudokuWebApi\\SudokuWebApi.csproj",
+      "projectPath": "E:\\Intern PHP\\sudokuSolver\\SudokuSolver\\SudokuWebApi\\SudokuWebApi.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "E:\\Intern PHP\\sudoku\\SudokuWebApi\\obj\\",
+      "outputPath": "E:\\Intern PHP\\sudokuSolver\\SudokuSolver\\SudokuWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
