@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- This is Sudoku table's design -->
+    <table id="sudokuTable">
+        <tbody>
+            <tr>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+                <td><input type="number" min="1" max="9"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="solveButton">Solve</button>
+    
+    <!-- This is DxDataGrid-->
+    <div id="gridContainer"></div>
+
+
+    <!-- This is JS for click Solve button-->
+    <script>
+        // This is JS code for input value to table
+        const inputs = document.querySelectorAll('input[type="number"]');
+        inputs.forEach(input => {
+            input.addEventListener('input', () => {
+                const value = parseInt(input.value);
+                if (isNaN(value) || value < 1 || value > 9) {
+                    input.value = '';
+                }
+            });
+        });
+    </script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.1.4/css/dx.common.css" />
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.1.4/css/dx.light.css" />
+    <script src="https://cdn3.devexpress.com/jslib/21.1.4/js/dx.all.js"></script>
+</body>
+</html>

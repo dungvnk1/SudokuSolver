@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "655aZ7Frjk7ZlEPUI7GNgO85YTd/NPUXqBl3+V4edCs=",
+  "Source": "SudokuWebApi",
+  "BasePath": "_content/SudokuWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
