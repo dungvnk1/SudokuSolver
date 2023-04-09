@@ -35,18 +35,6 @@ function solveClickButton() {
             console.error(error);
         }
     });
-
-    $(function() {
-        $("#gridContainer").dxDataGrid({
-            dataSource: new DevExpress.data.CustomStore({
-                loadMode: "raw",
-                load: function() {
-                    return $.getJSON("https://localhost:7040/api/Sudoku")
-                        .fail(function() { throw "Data loading error" });
-                }
-            })
-        });
-    });
 }
 
 function readFromTable() {
